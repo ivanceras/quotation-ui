@@ -1,0 +1,217 @@
+
+body {
+    background: #fff;
+    color: #3b3b3b;
+}
+
+header {
+    height: 50px;
+}
+
+.headline {
+    margin: 40px 0 80px;
+    text-align: center;
+}
+
+.headline p {
+    font-size: 16px;
+}
+
+/*==========  Icons  ==========*/
+
+@font-face {
+    font-family: 'quotation-webfont';
+    src:  url('../fonts/quotation-webfont.eot?bsr5sp');
+    src:  url('../fonts/quotation-webfont.eot?bsr5sp#iefix') format('embedded-opentype'),
+    url('../fonts/quotation-webfont.ttf?bsr5sp') format('truetype'),
+    url('../fonts/quotation-webfont.woff?bsr5sp') format('woff'),
+    url('../fonts/quotation-webfont.svg?bsr5sp#quotation-webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'quotation-webfont' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    color: #3b3b3b;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-air-condition:before {
+    content: "\e900";
+}
+.icon-calculator:before {
+    content: "\e901";
+}
+.icon-camera:before {
+    content: "\e902";
+}
+.icon-car-repair:before {
+    content: "\e903";
+}
+.icon-catering:before {
+    content: "\e904";
+}
+.icon-cleaning:before {
+    content: "\e905";
+}
+.icon-dental:before {
+    content: "\e906";
+}
+.icon-laptop:before {
+    content: "\e907";
+}
+.icon-law:before {
+    content: "\e908";
+}
+.icon-paint:before {
+    content: "\e909";
+}
+.icon-tools:before {
+    content: "\e90a";
+}
+.icon-truck:before {
+    content: "\e90b";
+}
+
+
+
+.service-tiles {
+    box-shadow: 0 0 25px 0 #d8d8d8;
+}
+
+.service-tile-btn {
+    background: #fff;
+    border-right: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    color: inherit;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.service-tile-btn:hover {
+    background: #fafafa;
+}
+
+.service-tile-btn a {
+    color: inherit;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    text-decoration: none;
+}
+
+.service-tile-btn .fa {
+    color: #285da7;
+}
+
+.service-tile-btn h5 {
+    font-weight: 300;
+}
+
+.service-tile-btn .icon {
+    margin: 0 auto;
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+    .service-tile-btn {
+        width: 33.33%;
+        height: 74px;
+    }
+    .service-tile-btn a {
+        padding-top: 10px;
+    }
+    .service-tile-btn h5 {
+        font-size: 13px;
+    }
+    .icon-responsive {
+        font-size: 2em;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .container {
+        width: 650px;
+    }
+    .service-tile-btn {
+        width: 25%;
+        height: 140px;
+    }
+    .service-tile-btn a {
+        padding-top: 36px;
+    }
+    .service-tile-btn h5 {
+        font-size: 15px;
+    }
+    .service-tile-btn:nth-child(4n) { /* 4th, 8th, 12th */
+        border-right: 0;
+    }
+    .service-tile-btn:nth-child(n+9) { /* 9th, 10th, 11th, 12th */
+        border-bottom: 0;
+    }
+    .icon-responsive {
+        font-size: 2.77em;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .container {
+        width: 800px;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .service-tile-btn:nth-child(3n) { /* 3rd, 6th, 9th, 12th */
+        border-right: 0;
+    }
+    .service-tile-btn:nth-child(n+10) { /* 10th, 11th, 12th */
+        border-bottom: 0;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
