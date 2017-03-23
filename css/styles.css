@@ -1,11 +1,27 @@
 
 body {
-    background: #fff;
-    color: #3b3b3b;
+    background: #f8f9fb;
+    color: #4d4d4d;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 400;
 }
 
-header {
-    height: 50px;
+.scrolled body {
+    padding-top: 83px;
+}
+
+.scrolled #header {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    transition: background 0.3s;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 0 25px 0 #ecf3f9;
+}
+
+.logo {
+    display: inline-block;
 }
 
 .headline {
@@ -13,8 +29,43 @@ header {
     text-align: center;
 }
 
+.headline h1 {
+    font-size: 40px;
+}
+
 .headline p {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.headline strong {
+    font-weight: 500;
+}
+
+#login a {
+    margin-right: 10px;
+}
+
+#login .btn {
+    margin-left: 5px;
+}
+
+a {
+    color: #1976D2;
+}
+
+a:hover {
+    color: #1565C0;
+}
+
+.btn-primary {
+    background-color: #1976D2;
+    border-color: #1976D2;
+}
+
+.btn-primary:hover {
+    background-color: #1565C0;
+    border-color: #1565C0;
 }
 
 /*==========  Icons  ==========*/
@@ -39,7 +90,7 @@ header {
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-    color: #3b3b3b;
+    color: #1976D2;
 
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
@@ -86,7 +137,7 @@ header {
 
 
 .service-tiles {
-    box-shadow: 0 0 25px 0 #d8d8d8;
+    box-shadow: 0 0 25px 0 #ecf3f9;
 }
 
 .service-tile-btn {
@@ -132,6 +183,12 @@ header {
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
+    #header .container-fluid {
+        padding: 25px 15px;
+    }
+    .scrolled #header .container-fluid {
+        padding: 10px 15px;
+    }
     .service-tile-btn {
         width: 33.33%;
         height: 74px;
@@ -153,8 +210,14 @@ header {
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-    .container {
-        width: 650px;
+    #header .container-fluid {
+        padding: 25px 80px;
+    }
+    .scrolled #header .container-fluid {
+        padding: 10px 80px;
+    }
+    #services .container {
+        width: 800px;
     }
     .service-tile-btn {
         width: 25%;
